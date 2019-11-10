@@ -1,0 +1,22 @@
+<div class="single-package">
+  <div class="thumb">
+    <img class="img-fluid" [src]="packageItem.image" alt="" />
+  </div>
+  <p class="date">
+    <span>{{ packageItem.start_date }}</span> <br />
+    {{ packageItem.start_month }}
+  </p>
+  <div class="meta-top d-flex">
+    <p><span class="fa fa-location-arrow"></span> {{ packageItem.start_location }}</p>
+    <p class="ml-20">
+      <span class="fa fa-calendar"></span> {{ packageItem.trip_length }}
+    </p>
+  </div>
+  <h4>
+    {{ packageItem.package_name }}
+  </h4>
+  <p>
+    {{ packageItem.desc }}
+  </p>
+  <a href="#" class="primary-btn">Read More</a>
+</div>

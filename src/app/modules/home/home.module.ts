@@ -11,11 +11,14 @@ import { TeamComponent } from './page/team/team.component';
 import { CtaSubscribeComponent } from './page/cta-subscribe/cta-subscribe.component';
 import { TestimonialsComponent } from './page/testimonials/testimonials.component';
 import { BlogComponent } from './page/blog/blog.component';
+import { BlogItemComponent } from './page/blog-item/blog-item.component';
+import { FeatureItemComponent } from './page/feature-item/feature-item.component';
+import { TripPackageItemComponent } from './page/trip-package-item/trip-package-item.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, BannerComponent, FeatureComponent, TripPackageComponent, CtaComponent, PopularPlacesComponent, TeamComponent, CtaSubscribeComponent, TestimonialsComponent, BlogComponent],
+  declarations: [HomeComponent, BannerComponent, FeatureComponent, TripPackageComponent, CtaComponent, PopularPlacesComponent, TeamComponent, CtaSubscribeComponent, TestimonialsComponent, BlogComponent, BlogItemComponent, FeatureItemComponent, TripPackageItemComponent],
   imports: [
     HomeRoutingModule,
   ]

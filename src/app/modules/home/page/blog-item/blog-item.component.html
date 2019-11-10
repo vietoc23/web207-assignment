@@ -1,0 +1,30 @@
+<div class="single-blog">
+  <div class="blog-thumb">
+    <img class="img-fluid" [src]="blog.image" alt="" />
+  </div>
+  <div class="blog-details">
+    <div class="blog-meta d-flex">
+      <p>
+        <a href="#">
+          <span class="fa fa-calendar"></span>
+          {{ blog.date_created }}
+        </a>
+      </p>
+      <p>
+        <a href="#">
+          <span class="fa fa-heart-o"></span>
+          {{ blog.likes }}
+        </a>
+      </p>
+      <p>
+        <a href=""></a>
+      </p>
+    </div>
+    <h5>
+      <a href="#">{{ blog.title }}</a>
+    </h5>
+    <p>
+      {{ blog.desc }}
+    </p>
+  </div>
+</div>
