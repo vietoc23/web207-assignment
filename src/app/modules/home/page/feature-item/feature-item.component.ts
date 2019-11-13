@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TripService } from 'src/app/data/schema/TripService';
 
 @Component({
@@ -6,6 +6,7 @@ import { TripService } from 'src/app/data/schema/TripService';
   templateUrl: './feature-item.component.html',
   styleUrls: ['./feature-item.component.scss']
 })
+
 export class FeatureItemComponent implements OnInit {
 
   constructor() { }
@@ -13,10 +14,17 @@ export class FeatureItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  featureItem: TripService = {
-    name: `Relaxation in the Local Beach Campfire`,
-    desc: 'Lorem ipsum dolor sit amet, consecter adipisicing elit, sed do eiusmod tempor incididunt.',
-    image: "assets/img/service/s2.png"
+  onReadMore: TripService;
+
+  @Input() feature: TripService;
+
+  @Output() deleteItem = new EventEmitter<number>();
+
+  deleteCard(id: number) {
+    this.deleteItem.emit(id);
   }
 
+  readMore(feature: TripService) {
+    this.onReadMore = feature;
+  }
 }

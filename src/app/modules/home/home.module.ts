@@ -21,6 +21,7 @@ import { TripPackageItemComponent } from './page/trip-package-item/trip-package-
   declarations: [HomeComponent, BannerComponent, FeatureComponent, TripPackageComponent, CtaComponent, PopularPlacesComponent, TeamComponent, CtaSubscribeComponent, TestimonialsComponent, BlogComponent, BlogItemComponent, FeatureItemComponent, TripPackageItemComponent],
   imports: [
     HomeRoutingModule,
+    CommonModule
   ]
 })
 export class HomeModule { }

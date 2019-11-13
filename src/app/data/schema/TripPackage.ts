@@ -1,5 +1,6 @@
 export class TripPackage {
-  start_date: string;
+  id: number;
+  start_date: number;
   start_month: string;
   start_location: string;
   trip_length: string;

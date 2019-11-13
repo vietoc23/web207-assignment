@@ -1,0 +1,17 @@
+<td>{{ index + 1 }}</td>
+<td (click)="showDetails(trip)">
+  {{ trip.package_name }}
+  <div class="row" *ngIf="tripDetails">
+    <div class="col-8">
+      {{ tripDetails.desc }}
+    </div>
+    <div class="col-4">
+      <img src="{{ tripDetails.image }}" alt="" width="100%">
+
+    </div>
+  </div>
+</td>
+<td>{{ trip.start_date }} {{ trip.start_month }}</td>
+<td>{{ trip.start_location }}</td>
+<td>{{ trip.trip_length }}</td>
+<td><button class="btn btn-danger" (click)="deleteTrip(trip.id)">Delete</button></td>

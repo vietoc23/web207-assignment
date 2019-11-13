@@ -1,14 +1,18 @@
 <div class="single-feature">
   <div class="feature-details">
     <h5>
-      {{ featureItem.name }}
+      {{ feature.name }}
     </h5>
     <p>
-      {{ featureItem.desc }}
+      {{ feature.desc }}
     </p>
-    <a href="#" class="primary-btn mb-40">Read More</a>
+    <p *ngIf="onReadMore">
+      {{ onReadMore.desc }}
+    </p>
+    <a href="#" class="primary-btn mb-40" (click)="readMore(feature)">Read More</a>
   </div>
   <div class="feature-thumb">
-    <img class="img-fluid" [src]="featureItem.image" alt="" />
+    <img class="img-fluid" [src]="feature.image" alt="" />
   </div>
+  <button (click)="deleteCard(feature.id)">Delete</button>
 </div>
