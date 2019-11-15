@@ -14,6 +14,11 @@ const routes: Routes = [
           import('./modules/admin-trip-manager/admin-trip-manager.module').then(m => m.AdminTripManagerModule)
       },
       {
+        path: 'trips/:id',
+        loadChildren: () =>
+          import('./modules/admin-trip-detail/admin-trip-detail.module').then(m => m.AdminTripDetailModule)
+      },
+      {
         path: 'dashboard',
         loadChildren: () =>
           import('./modules/admin/admin.module').then(m => m.AdminModule)
@@ -28,7 +33,12 @@ const routes: Routes = [
         path: '',
         loadChildren: () =>
           import('./modules/home/home.module').then(m => m.HomeModule)
-      }
+      },
+      // {
+      //   path: 'about',
+      //   loadChildren: () =>
+      //     import('./modules/home/about.module').then(m => m.AboutModule)
+      // }
     ]
   }
 

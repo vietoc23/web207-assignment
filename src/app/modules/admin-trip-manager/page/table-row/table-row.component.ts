@@ -11,6 +11,7 @@ export class TableRowComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
   @Input() trip: TripPackage;
@@ -24,7 +25,7 @@ export class TableRowComponent implements OnInit {
     this.tripDetails = trip;
   }
 
-  deleteTrip(id: number) {
+  deleteTripPackage(id: number) {
     this.deleteTripId.emit(id);
   }
 

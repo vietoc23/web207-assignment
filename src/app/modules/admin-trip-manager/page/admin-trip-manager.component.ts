@@ -1,5 +1,6 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-import { TripPackageData } from "../../../data/schema/mock-data/TripPackageData";
+import { TripPackage } from 'src/app/data/schema/TripPackage';
+import { TripPackageService } from 'src/app/data/service/trip-package.service';
 
 @Component({
   selector: 'app-admin-trip-manager',
@@ -7,17 +8,21 @@ import { TripPackageData } from "../../../data/schema/mock-data/TripPackageData"
   styleUrls: ['./admin-trip-manager.component.scss']
 })
 export class AdminTripManagerComponent implements OnInit {
+  trips: TripPackage[];
 
-  constructor() { }
+  constructor(private tripPackageService: TripPackageService) {}
 
   ngOnInit() {
+    this.getTripPackages();
   }
 
-  trips = TripPackageData;
+  getTripPackages(): void {
+    this.trips = this.tripPackageService.getTripPackages();
+  }
 
   deleteTrip (id: number) {
     console.log(id);
 
-    this.trips = this.trips.filter(trip => trip.id != id);
+    this.trips = this.tripPackageService.deleteTripPackage(id);
   }
 }

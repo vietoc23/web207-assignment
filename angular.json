@@ -31,10 +31,13 @@
 
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/vendor/fontawesome-free/css/all.css",
-              "src/assets/css/sb-admin-2.min.css"
+              "src/assets/css/sb-admin-2.min.css",
+              "src/assets/css/style.css"
             ],
             "scripts": [
-              "src/assets/js/theme.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/theme.js",
+              "src/assets/js/sb-admin-2.min.js"
             ]
           },
           "configurations": {
