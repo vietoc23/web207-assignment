@@ -10,7 +10,6 @@ import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.compone
 import { AdminHeaderComponent } from './layout/admin-header/admin-header.component';
 import { AdminFooterComponent } from './layout/admin-footer/admin-footer.component';
 import { AdminSidebarComponent } from './layout/admin-sidebar/admin-sidebar.component';
-import { AdminTripDetailComponent } from './modules/admin-trip-detail/page/admin-trip-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +20,11 @@ import { AdminTripDetailComponent } from './modules/admin-trip-detail/page/admin
     AdminLayoutComponent,
     AdminHeaderComponent,
     AdminFooterComponent,
-    AdminSidebarComponent,
-    AdminTripDetailComponent
+    AdminSidebarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

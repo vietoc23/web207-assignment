@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AdminTripDetailComponent } from './page/admin-trip-detail.component';
+import { AdminTripUpdateComponent } from './page/admin-trip-update.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: AdminTripDetailComponent
+    component: AdminTripUpdateComponent
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AdminTripDetailRoutingModule { }
+export class AdminTripUpdateRoutingModule { }

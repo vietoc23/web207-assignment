@@ -15,6 +15,10 @@ export class TripPackageService {
     return this.trips;
   }
 
+  getTripPackage(id): TripPackage {
+    return this.trips.find(trip => trip.id === id);
+  }
+
   deleteTripPackage(id: number) {
     this.trips = this.trips.filter(trip => trip.id != id);
     return this.trips;

@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { TripPackage } from 'src/app/data/schema/TripPackage';
 import { ActivatedRoute } from '@angular/router';
 import { TripPackageService } from 'src/app/data/service/trip-package.service';
-import { TripPackage } from 'src/app/data/schema/TripPackage';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-admin-trip-detail',
-  templateUrl: './admin-trip-detail.component.html',
-  styleUrls: ['./admin-trip-detail.component.scss']
+  selector: 'app-admin-trip-update',
+  templateUrl: './admin-trip-update.component.html',
+  styleUrls: ['./admin-trip-update.component.scss']
 })
-export class AdminTripDetailComponent implements OnInit {
+export class AdminTripUpdateComponent implements OnInit {
   tripPackage: TripPackage;
 
   constructor(
