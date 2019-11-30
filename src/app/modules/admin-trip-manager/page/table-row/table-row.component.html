@@ -1,6 +1,6 @@
 <td>{{ index + 1 }}</td>
 <td>
-  <a routerLink="/admin/trip/{{ trip.id }}">{{ trip.package_name }}</a>
+  <a routerLink="{{ trip.id }}">{{ trip.package_name }}</a>
   <!-- <a data-toggle="modal" data-target="#exampleModal">{{ trip.package_name }}</a> -->
   <div class="row" *ngIf="tripDetails">
     <div class="col-8">
@@ -11,10 +11,11 @@
     </div>
   </div>
 </td>
-<td>{{ trip.start_date }} {{ trip.start_month }}</td>
+<td>{{ trip.start_date | date}}</td>
 <td>{{ trip.start_location }}</td>
 <td>{{ trip.trip_length }}</td>
 <td>
+  <a class="btn btn-primary" routerLink="{{ trip.id }}/edit">Edit</a>
   <button class="btn btn-danger" (click)="deleteTripPackage(trip.id)">
     Delete
   </button>

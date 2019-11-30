@@ -26,11 +26,11 @@
           id="navbarSupportedContent"
         >
           <ul class="nav navbar-nav menu_nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="packages.html">Packages</a>
+              <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
             </li>
             <li class="nav-item submenu dropdown">
               <a

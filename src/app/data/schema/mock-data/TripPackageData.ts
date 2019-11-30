@@ -3,8 +3,7 @@ import { TripPackage } from '../TripPackage';
 export const TripPackageData: TripPackage[] = [
   {
     id: 1,
-    start_date: 23,
-    start_month: 'November',
+    start_date: new Date(23/11/2019),
     start_location: 'Hanoi',
     trip_length: '6 days 5 nights',
     package_name: 'Hanoi homestay',
@@ -13,8 +12,7 @@ export const TripPackageData: TripPackage[] = [
   },
   {
     id: 2,
-    start_date: 23,
-    start_month: 'December',
+    start_date: new Date(23/12/2019),
     start_location: 'Hanoi',
     trip_length: '6 days 5 nights',
     package_name: 'Hanoi homestay',
@@ -23,8 +21,7 @@ export const TripPackageData: TripPackage[] = [
   },
   {
     id: 3,
-    start_date: 12,
-    start_month: 'January',
+    start_date: new Date(12/1/2019),
     start_location: 'Ho Chi Minh City',
     trip_length: '6 days 5 nights',
     package_name: 'Ho Chi Minh City homestay',
@@ -33,8 +30,7 @@ export const TripPackageData: TripPackage[] = [
   },
   {
     id: 4,
-    start_date: 22,
-    start_month: 'February',
+    start_date: new Date(22/2/2019),
     start_location: 'Ha Long Bay',
     trip_length: '6 days 5 nights',
     package_name: 'Ha Long Bay homestay',
@@ -43,8 +39,7 @@ export const TripPackageData: TripPackage[] = [
   },
   {
     id: 5,
-    start_date: 1,
-    start_month: 'May',
+    start_date: new Date(1/5/2019),
     start_location: 'Dalat',
     trip_length: '6 days 5 nights',
     package_name: 'Dalat homestay',

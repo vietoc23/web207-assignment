@@ -17,12 +17,20 @@ export class AdminTripManagerComponent implements OnInit {
   }
 
   getTripPackages(): void {
-    this.trips = this.tripPackageService.getTripPackages();
+    this.tripPackageService.getTripPackages().subscribe(data => {
+      this.trips = data;
+
+    });
   }
 
-  deleteTrip (id: number) {
-    console.log(id);
+  editTrip(id: number) {
 
-    this.trips = this.tripPackageService.deleteTripPackage(id);
+  }
+
+  deleteTrip(id: number) {
+    this.tripPackageService.deleteTripPackage(id).subscribe(data => {
+      this.trips = this.trips.filter(trip => trip.id != data.id);
+      this.getTripPackages();
+    });
   }
 }

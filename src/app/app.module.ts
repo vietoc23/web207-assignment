@@ -10,6 +10,7 @@ import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.compone
 import { AdminHeaderComponent } from './layout/admin-header/admin-header.component';
 import { AdminFooterComponent } from './layout/admin-footer/admin-footer.component';
 import { AdminSidebarComponent } from './layout/admin-sidebar/admin-sidebar.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AdminSidebarComponent } from './layout/admin-sidebar/admin-sidebar.comp
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

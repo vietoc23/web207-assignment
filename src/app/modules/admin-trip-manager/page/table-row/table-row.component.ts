@@ -18,6 +18,7 @@ export class TableRowComponent implements OnInit {
   @Input() index: number;
 
   @Output() deleteTripId = new EventEmitter<number>();
+  @Output() editTripId = new EventEmitter<number>();
 
   tripDetails: TripPackage;
 
@@ -27,6 +28,10 @@ export class TableRowComponent implements OnInit {
 
   deleteTripPackage(id: number) {
     this.deleteTripId.emit(id);
+  }
+
+  editTripPackage(id: number) {
+    this.editTripId.emit(id);
   }
 
 }

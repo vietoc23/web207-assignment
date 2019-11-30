@@ -9,16 +9,6 @@ const routes: Routes = [
     component: AdminLayoutComponent,
     children: [
       {
-        path: 'trip/:id',
-        loadChildren: () =>
-          import('./modules/admin-trip-detail/admin-trip-detail.module').then(m => m.AdminTripDetailModule)
-      },
-      {
-        path: 'trip/:id/edit',
-        loadChildren: () =>
-          import('./modules/admin-trip-update/admin-trip-update.module').then(m => m.AdminTripUpdateModule)
-      },
-      {
         path: 'trips',
         loadChildren: () =>
           import('./modules/admin-trip-manager/admin-trip-manager.module').then(m => m.AdminTripManagerModule)
@@ -39,11 +29,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./modules/home/home.module').then(m => m.HomeModule)
       },
-      // {
-      //   path: 'about',
-      //   loadChildren: () =>
-      //     import('./modules/home/about.module').then(m => m.AboutModule)
-      // }
+      {
+        path: 'about',
+        loadChildren: () =>
+          import('./modules/about/about.module').then(m => m.AboutModule)
+      }
     ]
   }
 
